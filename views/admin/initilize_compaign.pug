@@ -1,0 +1,34 @@
+@extends('admin.admin_dashboard')
+
+@section('content')
+
+@endsection
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initialize fundraising Campaign</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" style="position:absolute;top:10%;left:10%;font-family:serif;">
+    <h1 class="mt-5">Initialize Campaign</h1>
+    <form>
+        <div class="mb-3">
+            <label for="campaignName" class="form-label">Campaign Name</label>
+            <input type="text" class="form-control" id="campaignName" placeholder="Enter campaign name">
+        </div>
+        <div class="mb-3">
+            <label for="campaignDescription" class="form-label">Campaign Description</label>
+            <textarea class="form-control" id="campaignDescription" rows="3" placeholder="Enter campaign description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Initialize Campaign</button>
+    </form>
+</div>
+
+</body>
+</html>

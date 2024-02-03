@@ -1,0 +1,87 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Centered Bootstrap Form</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="container position-absolute shadow-sm"style="width:80%;position:absolute;top:10%;left:20%;height:80%;width:500px;justify-content:center;">
+        <div class="form-container">
+            <!-- Your Bootstrap Form Goes Here -->
+<form action="{{ asset(route('centertodb'))}}" method="POST">
+    @csrf
+    <h1 style="font-family:serif">Add charity center</h1><br>
+    <div class="row">
+        <div class="col-md-6">
+        
+        <div class="form-group">
+        <label for="center_name">center name</label>
+        <input type="text" class="form-control" id="center_name" name="center_name" placeholder="name of center">
+    </div>
+    <div class="form-group">
+        <label for="center_category">capacity</label>
+        <input type="text" class="form-control" id="capcity" name="capcity" placeholder="number of people">
+        
+    </div>
+    <div class="form-group">
+        <label for="center_name">address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="center addressr">
+    </div>
+
+        </div>
+        <div class="col-md-6">
+        <div class="form-group">
+        <label for="center_category">description</label>
+        <input type="text" class="form-control" id="description" name="description" placeholder="description">
+    </div>
+    <div class="form-group">
+        <label for="center_name">Contact</label>
+        <input type="text" class="form-control" id="contact" name="contact" placeholder="contact">
+    </div>
+    <div class="form-group">
+        <label for="center_category">location</label>
+        <input type="text" class="form-control" id="location" name="location" placeholder="place center located">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+        </div>
+    </div>
+    
+    
+</form>
+
+        </div>
+    </div>
+
+    <!-- Optional: Sidebar and Topbar Goes Here -->
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
